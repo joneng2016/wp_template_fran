@@ -10,3 +10,13 @@ function getFooterInformations($information) {
 
     return $dictionary[$information];
 }
+
+function absolutePosition() {
+    
+    return __DIR__ ;
+
+}
+
+function imagePosition($nameOfImage) {
+    return "http://" . $_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/images/{$nameOfImage}";
+}

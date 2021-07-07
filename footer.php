@@ -2,9 +2,16 @@
     
     <center>   
 
-        <span>
+        <span>            
             <a class="type_footer" href="<?= getFooterInformations("facebook") ?>">
+                
+                <img                 
+                    width="20"
+                    src="<?=imagePosition('face_fig.png')?>"
+                >
+                
                 facebook 
+
             </a>
         </span>
             <br>
