@@ -25,3 +25,20 @@ Version:1.0.0
     text-shadow: 1px 1px 1px #adb5bd;
 
 }
+
+.footer-style {
+    margin-top:140px;
+    background-color: #000;
+    height: 200px;
+}
+
+.type_footer {
+    color:#adb5bd;
+    transition: 5px;
+    text-decoration: none;
+}
+
+.type_footer:hover {
+    color:#637d97;
+    cursor: pointer;
+}
