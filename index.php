@@ -1,13 +1,23 @@
 
     <?php get_header(); ?>
 
-        <div style="margin-top:360px;">
-            <center>
+        <div class="general-body">
+            
+            <div style="padding-top:60px">
+                <center>
 
-                <h2>Bem Vindo a Matilha Feliz</h2>            
-                <h3>Aqui o seu Pet é mais feliz porque é tratado com respeito!</h3>
+                    <img     
+                        class="image-logo"
+                        src="<?=imagePosition('logo.jpeg')?>"
+                    >
 
-            </center>
+
+                    <h2 style="margin-top:35px;color:#ffff;">Bem Vindo a Matilha Feliz</h2>    
+                    <h4 style="margin-top:25px;color:#ffff;">Centro de Estética Canina</h4>        
+                    <h4 style="color:#ffff;">Aqui o seu Pet é mais feliz porque é tratado com respeito!</h4>
+
+                </center>
+            </div>
         </div>
     
     </body>
