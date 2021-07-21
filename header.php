@@ -21,7 +21,12 @@
         src="<?php echo get_stylesheet_directory_uri().'/js/bootstrap.js'; ?>"
     >
     </script>
-    
+
+    <link rel="icon" 
+      type="image/png" 
+      href="<?php echo get_stylesheet_directory_uri().'/images/favicoin.jpeg'; ?>"
+    >
+
     <link 
         rel="stylesheet" 
         href="<?php echo get_stylesheet_directory_uri().'/css/bootstrap.css'; ?>"
@@ -36,6 +41,7 @@
         crossorigin="anonymous"
     >
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
 </head>
 
