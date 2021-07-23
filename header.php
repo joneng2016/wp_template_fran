@@ -24,7 +24,7 @@
 
     <link rel="icon" 
       type="image/png" 
-      href="<?php echo get_stylesheet_directory_uri().'/images/favicoin.jpeg'; ?>"
+      href="<?php echo get_stylesheet_directory_uri().'/images/favicoin.png'; ?>"
     >
 
     <link 
