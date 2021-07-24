@@ -68,15 +68,15 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="menu-link active" aria-current="page" href="#">Home</a>
+                        <a class="menu-link active" aria-current="page" href="/" >Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="#">Serviços</a>
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'service' )->ID )  ?>">Serviços</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="#">Fotos</a>
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'pictures' )->ID )  ?>">Fotos</a>
                     </li>
 
                     <li class="nav-item">
