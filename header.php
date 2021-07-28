@@ -4,33 +4,11 @@
     
     <title>Matilha Felix</title>
     
-    <script 
-        type="text/javascript" 
-        src="<?php echo get_stylesheet_directory_uri().'/js/jquery.js'; ?>"
-    >
-    </script>
-
-    <script 
-        type="text/javascript" 
-        src="<?php echo get_stylesheet_directory_uri().'/js/jquery-ui.min.js'; ?>"
-    >
-    </script>
-    
-    <script 
-        type="text/javascript" 
-        src="<?php echo get_stylesheet_directory_uri().'/js/bootstrap.js'; ?>"
-    >
-    </script>
-
     <link rel="icon" 
       type="image/png" 
-      href="<?php echo get_stylesheet_directory_uri().'/images/favicoin.png'; ?>"
+      href="<?php echo get_stylesheet_directory_uri().'/assets/images/favicoin.png'; ?>"
     >
 
-    <link 
-        rel="stylesheet" 
-        href="<?php echo get_stylesheet_directory_uri().'/css/bootstrap.css'; ?>"
-    >
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
@@ -68,23 +46,33 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="menu-link active" aria-current="page" href="/" >Home</a>
+                        <a class="menu-link active" aria-current="page" href="/" >
+                            Home
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'service' )->ID )  ?>">Serviços</a>
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'service' )->ID )  ?>">
+                            Serviços
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'pictures' )->ID )  ?>">Fotos</a>
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'pictures' )->ID )  ?>">
+                            Fotos
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="#">Vídeos</a>
+                        <a class="menu-link" href="#">
+                            Vídeos
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="#">Como Chegar</a>
+                        <a class="menu-link" href="#">
+                            Como Chegar
+                        </a>
                     </li>
 
                 </ul>

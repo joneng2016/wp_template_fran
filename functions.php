@@ -18,5 +18,9 @@ function absolutePosition() {
 }
 
 function imagePosition($nameOfImage) {
-    return "http://" . $_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/images/{$nameOfImage}";
+    return "http://" . $_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/assets/images/{$nameOfImage}";
+}
+
+function jsPosition($nameOfImage) {
+    return "http://" . $_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/assets/js/{$nameOfImage}";
 }
