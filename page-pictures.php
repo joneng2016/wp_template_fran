@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-<div class="standard-body">
+    <div class="standard-body">
+        <h2>Fotos</h2>
+    </div>
 
-    <h2>Fotos</h2>
+    <div class="body-menu">
 
-</div>
+    </div>
 
 </body>
 
