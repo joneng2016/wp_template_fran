@@ -1,3 +1,6 @@
+<?php 
+    findByPictures();
+?>
 <?php get_header(); ?>
 
     <div class="standard-body">

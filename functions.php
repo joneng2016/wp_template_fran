@@ -1,4 +1,5 @@
 <?php
+
 function getFooterInformations($information) {
     
     $dictionary = [        
@@ -23,4 +24,29 @@ function imagePosition($nameOfImage) {
 
 function jsPosition($nameOfImage) {
     return "http://" . $_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/assets/js/{$nameOfImage}";
+}
+
+/**
+ * @param void
+ * @return array
+ */
+
+function findByPictures() {
+
+    require_once(get_template_directory() . "/app/services/LoadPicturesInformations.php");
+
+    $response = [];
+
+
+    try {
+        
+        $loadPicInf = new LoadPicturesInformations();
+        $loadPicInf->execute();
+
+    } catch (\Exception $th) {
+        throw new Exception("Error Processing Request", 1);
+        
+    }
+
+    return $response;
 }
