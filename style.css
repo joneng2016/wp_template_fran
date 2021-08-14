@@ -204,3 +204,36 @@ Version:1.0.0
     width: 30px;
     transition:1s;    
 }
+
+.to-photo {
+    margin-top:25px;
+    padding: 5px;
+    background-color: #b4b3c3;
+    margin-left: 190px;
+    margin-right: 190px;
+    overflow-x: auto;
+    border-radius: 25px;    
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 600px)  {
+    .to-photo {
+        margin-top:25px;
+        padding: 5px;
+        background-color: #b4b3c3;
+        margin-left: 1px;
+        margin-right: 1px;
+        overflow-x: auto;
+        border-radius: 25px;    
+    }
+}
+.image-photo {
+    border-radius: 15px;
+    width: 900px;
+}
+
+.description-photo {
+    margin-top:15px;
+    font-size: 25px;
+    font-weight: 500;
+}

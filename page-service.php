@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php getServiceText();?>
+
     <div class="standard-body">
 
         <h2>Serviços</h2>
