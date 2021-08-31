@@ -1,5 +1,7 @@
 <?php
 
+require_once(get_template_directory() . "/app/includes/include.php");
+
 function dd($argInput) {
     var_dump($argInput);
     die();
@@ -42,8 +44,6 @@ function jsPosition($nameOfImage) {
 
 function findByPictures() {
 
-    require_once(get_template_directory() . "/app/services/LoadPicturesInformations.php");
-
     $response = [];
 
     try {
@@ -53,8 +53,8 @@ function findByPictures() {
         $loadPicInf->execute();
         $response = $loadPicInf->getPhotos();
 
-    } catch (\Exception $th) {
-        throw new Exception("Error Processing Request", 1);
+    } catch (\Exception $e) {
+        throw new Exception(ErrorMsg::PICTURES_EXCEPTIOS_HAPPENS + " " + $e->getMessage());
         
     }
 
@@ -67,9 +67,7 @@ function findByPictures() {
  */
 
 function getServiceText() {
- 
-    require_once(get_template_directory() . "/app/services/ServiceText.php");
- 
+
     $response = [];
 
     try {
@@ -79,10 +77,37 @@ function getServiceText() {
         $serviceText->execute();
         $response = $serviceText->getServices();
 
-    } catch (\Exception $th) {
-        throw new Exception("Error Processing Request", 1);
-        
+    } catch (\Exception $e) {
+        throw new Exception(ErrorMsg::SERVICE_EXCEPTIONS_HAPPENS + " " + $e->getMessage());
+      
     }
 
     return $response;
+}
+
+/**
+ * @param void
+ * @return array
+ */
+function getWayToPet() {
+
+    $response = [];
+
+    try {
+        
+        $wayToPet = new WayToPet();
+
+        $wayToPet->execute();
+
+        $response = (object) [ 
+            'whereIsThePlace' => $wayToPet->getWayToPet(),
+            'whereIsInWeb' => $wayToPet->getWayToPetWeb()
+        ];
+
+    } catch (\Exception $e) {
+        throw new Exception(ErrorMsg::WAY_TOPET_EXCEPTIONS_HAPPENS + " " + $e->getMessage());        
+    } 
+
+    return $response;
+
 }

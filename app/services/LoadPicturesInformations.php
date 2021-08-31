@@ -12,10 +12,8 @@ class LoadPicturesInformations {
 
     private function createTableIfNotExist() {
 
-        $contentCreateIfNotExist = file_get_contents(get_template_directory() . "/app/queries/create_table_if_not_exist.sql");
-        
-        global $wpdb;
-        $wpdb->get_results($contentCreateIfNotExist);
+        ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::CREATE_TABLE_PICTURE);
+    
 
     }
 
@@ -23,8 +21,8 @@ class LoadPicturesInformations {
         
         global $wpdb;
 
-        $selectPhotosScript = file_get_contents(get_template_directory() . "/app/queries/select_all_photos.sql");
-
+        $selectPhotosScript = ReadSQLAndExec::getInstance()->execQuery(AddressEnum::SELECT_ALL_PHOTOS);
+        
         $this->photos = array_map(function($photo){
             
             $photo->photo_name = protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/assets/photos/{$photo->photo_name}");

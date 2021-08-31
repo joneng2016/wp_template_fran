@@ -8,7 +8,6 @@
       type="image/png" 
       href="<?php echo get_stylesheet_directory_uri().'/assets/images/favicoin.png'; ?>"
     >
-
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
@@ -52,13 +51,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'service' )->ID )  ?>">
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( PagesEnum::SERVICES  )->ID )  ?>">
                             Serviços
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( 'pictures' )->ID )  ?>">
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( PagesEnum::PICTURES )->ID )  ?>">
                             Fotos
                         </a>
                     </li>
@@ -70,7 +69,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="menu-link" href="#">
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( PagesEnum::WAY_TO_PET )->ID ) ?>">
                             Como Chegar
                         </a>
                     </li>

@@ -1,5 +1,5 @@
 <footer class="footer-style">
-    
+
     <div style="color:#fff;padding-top:15px;">
         
         <center>   

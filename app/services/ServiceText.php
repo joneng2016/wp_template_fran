@@ -10,20 +10,27 @@ class ServiceText {
         $this->select();
     }
 
+    /**
+     * @param void
+     * 
+     * @return void
+     */
+
     private function createTableIfNotExist() {
-
-        $contentCreateIfNotExist = file_get_contents(get_template_directory() . "/app/queries/create_table_if_not_exist_services.sql");
-
-        global $wpdb;
-        $wpdb->get_results($contentCreateIfNotExist);
-
+        ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::CREATE_TABLE_SERVICE);
     }
+
+    /**
+     * @param void
+     * 
+     * @return void
+     */
 
     private function select() {
         
         global $wpdb;
 
-        $this->services = $wpdb->get_results("SELECT * FROM services_infs");
+        $this->services = ReadSQLAndExec::getInstance()->execQuery("SELECT * FROM services_infs");
 
     }
 
