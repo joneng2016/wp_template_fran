@@ -11,25 +11,22 @@ class LoadPicturesInformations {
     }
 
     private function createTableIfNotExist() {
-
-        ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::CREATE_TABLE_PICTURE);
-    
+        ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::CREATE_TABLE_PICTURE);    
 
     }
 
     private function selectAllPhotos() {
         
-        global $wpdb;
-
-        $selectPhotosScript = ReadSQLAndExec::getInstance()->execQuery(AddressEnum::SELECT_ALL_PHOTOS);
         
+        $photoFromDb = ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::SELECT_ALL_PHOTOS);
+
         $this->photos = array_map(function($photo){
-            
+
             $photo->photo_name = protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/assets/photos/{$photo->photo_name}");
             
             return $photo;
 
-        },$wpdb->get_results($selectPhotosScript));
+        },$photoFromDb);
 
     }
 
@@ -37,5 +34,3 @@ class LoadPicturesInformations {
         return $this->photos;
     }
 }
-
-?>
