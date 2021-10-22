@@ -30,11 +30,11 @@ function protocol($inputArg) {
 }
 
 function imagePosition($nameOfImage) {
-    return protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/assets/images/{$nameOfImage}");
+    return protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/wp_template_fran/assets/images/{$nameOfImage}");
 }
 
 function jsPosition($nameOfImage) {
-    return protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/matilha_feliz/assets/js/{$nameOfImage}");
+    return protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/wp_template_fran/assets/js/{$nameOfImage}");
 }
 
 /**
