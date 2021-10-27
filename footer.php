@@ -1,3 +1,5 @@
+<?php $wayToPet = getWayToPet(); ?>
+
 <footer class="footer-style">
 
     <div style="color:#fff;padding-top:15px;">
@@ -8,7 +10,7 @@
                 class="d-inline-block" 
                 tabindex="0" 
                 data-toggle="tooltip" 
-                title="<?= getFooterInformations("facebook") ?>"
+                title="<?= $wayToPet->whereIsInWeb->facebook; ?>"
             >            
                 <a class="type_footer" href="<?= getFooterInformations("facebook") ?>">
                     
@@ -18,7 +20,7 @@
                         style="margin-right:5px;"
                     >
                     
-                    facebook 
+                    <?= $wayToPet->whereIsInWeb->facebook; ?>
 
                 </a>
             </span>
@@ -27,9 +29,9 @@
                 class="d-inline-block" 
                 tabindex="0" 
                 data-toggle="tooltip" 
-                title="<?= getFooterInformations("instagran") ?>"
+                title="<?=$wayToPet->whereIsInWeb->instagran?>"
             >
-                <a class="type_footer" href="<?= getFooterInformations("instagran") ?>"> 
+                <a class="type_footer" href="<?=$wayToPet->whereIsInWeb->url_instagran?>"> 
                     
                     <img                 
                         class="img-footer"
@@ -37,7 +39,7 @@
                         style="margin-right:5px;"
                     >
                     
-                    instagran 
+                    <?=$wayToPet->whereIsInWeb->instagran?> 
                 </a>
             </span>
                 <br> 
@@ -51,7 +53,7 @@
                     >
                     
                     <strong> 
-                        franciele.quadros@hotmail.com
+                        <?=$wayToPet->whereIsInWeb->email?>
                     </strong> 
 
                 </a>

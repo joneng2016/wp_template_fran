@@ -180,15 +180,28 @@ Version:1.0.0
     background-image: url("assets/images/way.jpg");
     height:800px;
 }
+
+.google-iframe {
+    margin:25px;
+}
+
+@media screen and (max-width: 600px)  {
+    .only_image_side_three {
+        background-image: url("assets/images/way.jpg");
+        height:800px;
+        display: none;
+    }
+
+    .body-menu-address .row .col-6 {
+        width: 90%;
+    }
+}
+
 .service-card {
     border-radius: 5px;
     margin: 30px;
     background-color: #dddceb;
     text-align: left;
-}
-
-.google-iframe {
-    margin:25px;
 }
 
 .service-card h5 { 
@@ -253,9 +266,21 @@ Version:1.0.0
 
 .address {
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
+    margin-left: 25px;
 }
 
- .address-place span {
-     font-size:20px;
- }
+.address-place span {
+    font-size:20px;
+}
+
+.address-web {
+    margin-left: 25px;    
+}
+
+.type_page_waytoped {
+    font-size: 20px;
+    font-weight: 700;
+    color:#5a569f;
+    text-decoration: none;
+}

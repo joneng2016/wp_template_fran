@@ -48,7 +48,8 @@ class WayToPet {
      * @return void
      */
     private function selectTableWayToPet() {
-        $this->wayToPet = reset(ReadSQLAndExec::getInstance()->execQuery('SELECT * FROM way_to_pet LIMIT 1'));        
+        $wayToPet = ReadSQLAndExec::getInstance()->execQuery('SELECT *   FROM way_to_pet LIMIT 1');
+        $this->wayToPet = reset($wayToPet);
     }
 
 
@@ -58,7 +59,8 @@ class WayToPet {
      * @return void
      */
     private function selectTableWayToPetWeb() {
-        $this->wayToPetWeb = reset(ReadSQLAndExec::getInstance()->execQuery('SELECT * FROM way_to_pet_web LIMIT 1'));
+        $wayToPetWeb = ReadSQLAndExec::getInstance()->execQuery('SELECT * FROM way_to_pet_web LIMIT 1');
+        $this->wayToPetWeb = reset($wayToPetWeb);
     }
 
     
