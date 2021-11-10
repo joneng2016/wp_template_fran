@@ -185,16 +185,28 @@ Version:1.0.0
     margin:25px;
 }
 
+
 @media screen and (max-width: 600px)  {
+    
     .only_image_side_three {
-        background-image: url("assets/images/way.jpg");
-        height:800px;
         display: none;
     }
 
     .body-menu-address .row .col-6 {
         width: 90%;
     }
+    
+    
+    .to-photo {
+        margin-top:25px;
+        padding: 5px;
+        background-color: #b4b3c3;
+        margin-left: 1px;
+        margin-right: 1px;
+        overflow-x: auto;
+        border-radius: 25px;    
+    }
+
 }
 
 .service-card {
@@ -241,18 +253,7 @@ Version:1.0.0
     border-radius: 25px;    
 }
 
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 600px)  {
-    .to-photo {
-        margin-top:25px;
-        padding: 5px;
-        background-color: #b4b3c3;
-        margin-left: 1px;
-        margin-right: 1px;
-        overflow-x: auto;
-        border-radius: 25px;    
-    }
-}
+
 .image-photo {
     border-radius: 15px;
     width: 900px;
@@ -265,22 +266,50 @@ Version:1.0.0
 }
 
 .address {
-    font-weight: 400;
-    font-size: 20px;
+    width: 90%;
+    color:#fff;
+    background-color: #8b89b4!important;
+    border-radius: 15px;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 5px;
     margin-left: 25px;
+    margin-top:10px;
 }
 
 .address-place span {
     font-size:20px;
 }
 
-.address-web {
-    margin-left: 25px;    
+.address-web { 
+    padding: 5px;
+    border-radius: 15px;
+    background-color:#8b89b4!important;
+    margin-left:25px;
+    margin-top:40px;
+    height: 195px;
+    width: 90%;
 }
 
-.type_page_waytoped {
-    font-size: 20px;
-    font-weight: 700;
-    color:#5a569f;
-    text-decoration: none;
+.address-web .title_social_network {
+    font-weight: 300;
+    font-size: 30px;
+    color:#fff;
+    margin-bottom: 15px;
 }
+
+.address-web .type_page_waytoped {    
+    font-size: 25px;
+    color:#fff;
+    text-decoration: none;
+    margin-left:25px;
+}
+
+.box_address {
+    height:100%;
+    background-color:#e2e1f4;
+    margin-bottom: 5px;
+}
+
+
+

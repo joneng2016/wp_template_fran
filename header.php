@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -9,7 +11,7 @@
       href="<?php echo get_stylesheet_directory_uri().'/assets/images/favicoin.png'; ?>"
     >
     
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <link  href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css">
 
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
