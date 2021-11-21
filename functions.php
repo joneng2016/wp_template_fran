@@ -137,3 +137,12 @@ function getWayToPet() {
     return $response;
 
 }
+
+/**
+ * @param void
+ * $return object
+ */
+
+ function components() {
+    return Components::getInstance();
+ }

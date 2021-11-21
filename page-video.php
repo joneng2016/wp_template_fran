@@ -7,7 +7,7 @@
     </div>
 
     <div class="body-menu-address">
-        <?php Components::getInstance()->get("show_infs");?>
+        <?php components()->get("show_infs");?>
     </div>
 
 </body>

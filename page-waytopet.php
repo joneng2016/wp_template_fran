@@ -14,7 +14,7 @@
             </div>           
 
             <div class="col">
-                <?php Components::getInstance()->get("box_adress",getWayToPet());?>                
+                <?php components()->get("box_adress",getWayToPet());?>                
             </div>
         </div>
 
