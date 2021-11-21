@@ -10,3 +10,5 @@ require_once(get_template_directory() . "/app/enuns/ErrorMsg.php");
 require_once(get_template_directory() . "/app/enuns/AddressEnun.php");
 
 require_once(get_template_directory() . "/app/helpers/ReadSQLAndExec.php");
+
+require_once(get_template_directory() . "/app/components/Components.php");

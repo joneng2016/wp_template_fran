@@ -7,6 +7,11 @@ function dd($argInput) {
     die();
 }
 
+/**
+ * @param $inputArg information
+ * @return string
+ */
+
 function getFooterInformations($information) {
     
     $dictionary = [        
@@ -19,19 +24,40 @@ function getFooterInformations($information) {
     return $dictionary[$information];
 }
 
+
+/**
+ * @param void
+ * @return string
+ */
+
 function absolutePosition() {
     
     return __DIR__ ;
 
 }
 
+/**
+ * @param $inputArg string
+ * @return string
+ */
+
 function protocol($inputArg) {
     return "http://$inputArg";
 }
 
+/**
+ * @param $nameOfImage string
+ * @return string
+ */
+
 function imagePosition($nameOfImage) {
     return protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/wp_template_fran/assets/images/{$nameOfImage}");
 }
+
+/**
+ * @param $nameOfImage string
+ * @return string
+ */
 
 function jsPosition($nameOfImage) {
     return protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/wp_template_fran/assets/js/{$nameOfImage}");

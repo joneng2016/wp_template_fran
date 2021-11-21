@@ -3,17 +3,11 @@
 <?php $wayToPet = getWayToPet(); ?>
 
     <div class="standard-body">
-
         <h2>Vídeos</h2>
-
     </div>
 
     <div class="body-menu-address">
-
-        <div class="row">            
-            
-        </div>
-
+        <?php Components::getInstance()->get("show_infs");?>
     </div>
 
 </body>

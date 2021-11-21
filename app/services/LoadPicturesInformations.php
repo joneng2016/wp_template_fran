@@ -22,7 +22,7 @@ class LoadPicturesInformations {
 
         $this->photos = array_map(function($photo){
 
-            $photo->photo_name = protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/wp_template_fran/assets/photos/{$photo->photo_name}");
+            $photo->name = protocol($_SERVER["HTTP_HOST"] . "/wp-content/themes/wp_template_fran/assets/photos/{$photo->photo_name}");
             
             return $photo;
 
