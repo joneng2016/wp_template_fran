@@ -63,9 +63,9 @@
                             Fotos
                         </a>
                     </li>
-
+                    
                     <li class="nav-item">
-                        <a class="menu-link" href="#">
+                        <a class="menu-link" href="<?= get_permalink( get_page_by_path( PagesEnum::VIDEOS )->ID )  ?>">
                             Vídeos
                         </a>
                     </li>
