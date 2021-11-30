@@ -1,1 +1,1 @@
-SELECT * FROM photos;
+SELECT * FROM photos ORDER BY id_photos DESC;

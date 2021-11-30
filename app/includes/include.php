@@ -1,5 +1,7 @@
 <?php
 
+require_once(get_template_directory() . "/app/services/AbstractLoadInformation.php");
+require_once(get_template_directory() . "/app/services/LoadVideoInformations.php");
 require_once(get_template_directory() . "/app/services/LoadPicturesInformations.php");
 require_once(get_template_directory() . "/app/services/ServiceText.php");
 require_once(get_template_directory() . "/app/services/WayToPet.php");

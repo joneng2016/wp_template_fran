@@ -10,6 +10,8 @@
         </div>
     </div>
 
+    <?php components()->get("pagination");?>
+
 </body>
 
 <?php get_footer(); ?>

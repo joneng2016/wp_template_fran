@@ -73,15 +73,15 @@ function findByPictures() {
     $response = [];
 
     try {
-        
+
         $loadPicInf = new LoadPicturesInformations();
         
         $loadPicInf->execute();
-        $response = $loadPicInf->getPhotos();
+        $response = $loadPicInf->getElements();
 
     } catch (\Exception $e) {
         throw new Exception(ErrorMsg::PICTURES_EXCEPTIOS_HAPPENS + " " + $e->getMessage());
-        
+
     }
 
     return $response;
@@ -143,6 +143,31 @@ function getWayToPet() {
  * $return object
  */
 
- function components() {
-    return Components::getInstance();
- }
+function components() {
+   return Components::getInstance();
+}
+
+
+/**
+ * @param void
+ * @return array
+ */
+
+function findByVideos() {
+
+    $response = [];
+
+    try {
+
+        $loadVideoInf = new LoadVideoInformations();            
+        $loadVideoInf->execute();
+
+        $response = $loadVideoInf->getElements();
+
+    } catch (\Exception $e) {
+        throw new Exception(ErrorMsg::PICTURES_EXCEPTIOS_HAPPENS + " " + $e->getMessage());
+
+    }
+
+    return $response;
+}

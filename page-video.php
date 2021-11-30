@@ -6,8 +6,8 @@
         <h2>Vídeos</h2>
     </div>
 
-    <div class="body-menu-address">
-        <?php components()->get("show_infs");?>
+    <div class="body-menu-address">        
+        <?php components()->get("show_videos",findByVideos());?>
     </div>
 
 </body>

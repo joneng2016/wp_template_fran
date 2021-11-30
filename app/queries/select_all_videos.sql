@@ -1,0 +1,1 @@
+SELECT * FROM videos ORDER BY id_video DESC;

@@ -311,5 +311,8 @@ Version:1.0.0
     margin-bottom: 5px;
 }
 
-
-
+.pagination-infs {
+    margin-top:15px;
+    display: block;
+    text-align: center;
+}
