@@ -185,35 +185,16 @@ Version:1.0.0
     margin:25px;
 }
 
-
-@media screen and (max-width: 600px)  {
-    
-    .only_image_side_three {
-        display: none;
-    }
-
-    .body-menu-address .row .col-6 {
-        width: 90%;
-    }
-    
-    
-    .to-photo {
-        margin-top:25px;
-        padding: 5px;
-        background-color: #b4b3c3;
-        margin-left: 1px;
-        margin-right: 1px;
-        overflow-x: auto;
-        border-radius: 25px;    
-    }
-
-}
-
 .service-card {
     border-radius: 5px;
     margin: 30px;
     background-color: #dddceb;
     text-align: left;
+}
+
+.service-card-header {
+    display: inline-block;
+    height: auto;
 }
 
 .service-card h5 { 
@@ -224,7 +205,7 @@ Version:1.0.0
     transition:1s;
 }
 
-.service-card .text { 
+.service-card-text { 
     padding:5px;
 }
 
@@ -247,9 +228,8 @@ Version:1.0.0
     margin-top:25px;
     padding: 5px;
     background-color: #b4b3c3;
-    margin-left: 190px;
-    margin-right: 190px;
-    overflow-x: auto;
+    margin-left: 25px;
+    margin-right: 25px;
     border-radius: 25px;    
 }
 

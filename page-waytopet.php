@@ -6,14 +6,14 @@
 
     </div>
 
-    <div class="body-menu-address">
+    <div class="body-menu-address" id="way-to-pet">
 
         <div class="row">            
             
-            <div class="col-5 only_image_side_three">
+            <div class="col-5 only_image_side_three" id="waytopet-image">
             </div>           
 
-            <div class="col">
+            <div class="col" id="waytopet-content">
                 <?php components()->get("box_adress",getWayToPet());?>                
             </div>
         </div>

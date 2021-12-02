@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php $services = getServiceText();?>
-
     <div class="standard-body">
 
         <h2>Serviços</h2>
@@ -10,11 +8,11 @@
 
     <div class="body-menu row">
 
-        <div class="col-8">
-            <?php components()->get("services",$services);?>
+        <div class="col-8" id="service-dog-text">
+            <?php components()->get("services",getServiceText());?>
         </div>
 
-        <div class="col-4 only_image_side_two">
+        <div class="col-4 only_image_side_two" id="service-dog-image">
         </div>
 
     </div>
