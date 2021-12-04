@@ -296,3 +296,26 @@ Version:1.0.0
     display: block;
     text-align: center;
 }
+
+.iframe-video {
+    border-radius: 15px;
+    width:720px; 
+    height:615px;
+}
+
+.circle-pagination {
+    background-color: #b4b3c3;
+    border-radius: 5px;
+    padding: 3px;
+    color:#fff;
+    cursor: pointer;
+    transition:0.6s;
+}
+
+.circle-pagination:hover {
+    background-color: #b4b3c3;
+    border-radius: 5px;
+    padding: 3px;
+    color:#637d97;
+    cursor: pointer;
+}

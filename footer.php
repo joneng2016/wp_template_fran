@@ -12,7 +12,7 @@
                 data-toggle="tooltip" 
                 title="<?= $wayToPet->whereIsInWeb->facebook; ?>"
             >            
-                <a class="type_footer" href="<?= getFooterInformations("facebook") ?>">
+                <a class="type_footer" href="<?=$inputs->whereIsInWeb->url_facebook?>">
                     
                     <img     
                         class="img-footer"            
@@ -61,7 +61,7 @@
                 <br>
                 <br>
             <span style="margin-top:20px;" class="type_footer">
-                <?= getFooterInformations("address") ?> 
+                <?php components()->get("address",$wayToPet);?>
             </span>
                 <br>
                 <br>        

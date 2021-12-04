@@ -14,7 +14,7 @@
             </div>           
 
             <div class="col" id="waytopet-content">
-                <?php components()->get("box_adress",getWayToPet());?>                
+                <?php components()->get("box_adress",getWayToPet());?>
             </div>
         </div>
 
