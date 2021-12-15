@@ -1,6 +1,9 @@
 <?php
 
 require_once(get_template_directory() . "/app/includes/include.php");
+ /**
+  * Register the routes for the objects of the controller.
+  */
 
 function dd($argInput) {
     var_dump($argInput);
@@ -171,3 +174,6 @@ function findByVideos() {
 
     return $response;
 }
+
+
+require_once(get_template_directory() . "/app/bootstrap/bootstrap.php");
