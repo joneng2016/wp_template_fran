@@ -4,10 +4,10 @@ abstract class AbstractLoadInformation {
     
     protected $elements;
     
-    public function execute() {
+    public function execute($pagination = 0) {
 
         $this->createTableIfNotExist();
-        $this->selectAllElements();
+        $this->selectAllElements($pagination);
     }
 
     public function getElements() {
@@ -16,5 +16,5 @@ abstract class AbstractLoadInformation {
 
     abstract function createTableIfNotExist();
 
-    abstract function selectAllElements();
+    abstract function selectAllElements($pagination = 0);
 }

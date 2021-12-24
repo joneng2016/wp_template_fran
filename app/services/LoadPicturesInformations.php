@@ -6,9 +6,9 @@ class LoadPicturesInformations extends AbstractLoadInformation {
         ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::CREATE_TABLE_PICTURE);    
     }
 
-    public function selectAllElements() {
+    public function selectAllElements($pagination = 0) {
         
-        $photoFromDb = ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::SELECT_ALL_PHOTOS);
+        $photoFromDb = ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::SELECT_ALL_PHOTOS,$pagination);
 
         $this->elements = array_map(function($photo){
 

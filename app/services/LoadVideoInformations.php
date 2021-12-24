@@ -7,7 +7,7 @@ class LoadVideoInformations extends AbstractLoadInformation {
         ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::CREATE_TABLE_VIDEO);
     }
 
-    public function selectAllElements() {        
+    public function selectAllElements($pagination = 0) {        
         $this->elements = ReadSQLAndExec::getInstance()->readFileExecSQL(AddressEnum::SELECT_ALL_VIDEOS);        
     }
 }

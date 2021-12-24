@@ -2,8 +2,10 @@
 
 class PaginationController {
 
-    public function execute(Request $request) {
+    public function execute(Request $request) {        
         
-        return ['q' => 'b'];
+        $value = $request->variables[0]->value;
+
+        return findByPictures($value);
     }
 }

@@ -5,7 +5,7 @@
     </div>
 
     <div class="body-menu" id="image-page">
-        <div class="body-menu-address">
+        <div class="body-menu-address" id="images">
             <?php components()->get("show_infs",findByPictures());?>
         </div>
     </div>

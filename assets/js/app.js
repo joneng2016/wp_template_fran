@@ -9,5 +9,5 @@ export default function app() {
     PagePictures.execute()
     PageWayToPet.execute()
     PageVideos.execute()
-    Pagination.execute()
+    Pagination.firstTime()
 }

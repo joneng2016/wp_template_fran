@@ -1,1 +1,1 @@
-SELECT * FROM photos ORDER BY id_photos DESC;
+SELECT * FROM photos ORDER BY id_photos LIMIT 3 OFFSET {PAGINATION} 

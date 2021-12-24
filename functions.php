@@ -71,7 +71,7 @@ function jsPosition($nameOfImage) {
  * @return array
  */
 
-function findByPictures() {
+function findByPictures($pagination = 0) {
 
     $response = [];
 
@@ -79,7 +79,7 @@ function findByPictures() {
 
         $loadPicInf = new LoadPicturesInformations();
         
-        $loadPicInf->execute();
+        $loadPicInf->execute($pagination);
         $response = $loadPicInf->getElements();
 
     } catch (\Exception $e) {

@@ -1,17 +1,108 @@
 export default class Pagination {
 
-    static execute() {
+    static firstTime() {
 
         if ($("#pagination-component").length > 0) {
-            if ($.cookie("pagination") == undefined) {
-                $.cookie("pagination",0,{expires:1})
-            }
-        }
+            $.cookie("pagination",0,{expires:1})
+        } 
 
         if ($.cookie("pagination") == 0) {
             $("#pagination-back").css("display","none")
         }
 
+    }
+
+    static next() {
+        const oldvalue = $.cookie("pagination")
+        if ($("#pagination-component").length > 0) {
+            if ($.cookie("pagination") == undefined) {
+                $.cookie("pagination",0,{expires:1})
+            } else {
+                $.cookie(
+                    "pagination",
+                    parseInt($.cookie("pagination")) + 3,
+                    {expires:1}
+                )                
+            }
+        } 
+        
+        if ($.cookie("pagination") == 0) {
+            $("#pagination-back").css("display","none")
+        } else {
+            $("#pagination-back").css("display","inline")
+        }
+
+        Pagination.execRequest(parseInt($.cookie("pagination")),oldvalue)
+
+    }
+
+    static back() {
+        const oldvalue = $.cookie("pagination")
+        if ($("#pagination-component").length > 0) {
+            if ($.cookie("pagination") == undefined) {
+                $.cookie("pagination",0,{expires:1})
+            } else {
+                $.cookie(
+                    "pagination",
+                    parseInt($.cookie("pagination")) - 3,
+                    {expires:1}
+                )                
+            }
+        } 
+
+        if ($.cookie("pagination") == 0) {
+            $("#pagination-back").css("display","none")
+        } else {
+            $("#pagination-back").css("display","inline")
+        }
+
+        Pagination.execRequest(parseInt($.cookie("pagination")),oldvalue)
+    }
+
+    static execRequest(value = 0,oldvalue = 0) {
+
+        $.get(`/pagination?value=${value}`)
+        .then((e) => {
+
+            let htmlImage = ''
+            const data = JSON.parse(e)
+
+            data.forEach((element) => {
+                htmlImage += Pagination.stringShowInfs()
+                    .replace('{name}', element.name)
+                    .replace('{description}', element.description)                    
+            })
+
+            $("#image-page").html(`<center>${htmlImage}</center>`)
+            
+        }).catch(e => {
+            if (e.status = 404) {
+                $.cookie(
+                    "pagination",
+                    oldvalue,
+                    {expires:1}
+                )
+            }
+        })
+    }
+
+    static stringShowInfs() {
+        return `
+        <div class="to-photo">        
+            <div>
+                <img
+                    class="image-photo"
+                    src="{name}"
+                >
+            </div>
+
+            <div>
+                <span class="description-photo">
+                    {description}
+                </span>
+            </div>
+        </div>            
+        `
     }
 
 }

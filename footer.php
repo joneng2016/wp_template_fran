@@ -82,10 +82,3 @@
 
 <script type="module" src="<?=jsPosition('function.js')?>"> 
 </script>
-
-<script>
-function nextStep() {
-    console.log("qqlkdnflkdn")
-}
-
-</script>
