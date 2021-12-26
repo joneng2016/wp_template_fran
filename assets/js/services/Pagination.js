@@ -1,6 +1,11 @@
+import ControlBoxToPhoto from "./ControlBoxToPhoto.js";
+import PagePictures from "./PagePictures.js";
+
 export default class Pagination {
 
     static firstTime() {
+        ControlBoxToPhoto.execute()
+        PagePictures.execute()
 
         if ($("#pagination-component").length > 0) {
             $.cookie("pagination",0,{expires:1})
@@ -13,6 +18,9 @@ export default class Pagination {
     }
 
     static next() {
+        ControlBoxToPhoto.execute()
+        PagePictures.execute()
+
         const oldvalue = $.cookie("pagination")
         if ($("#pagination-component").length > 0) {
             if ($.cookie("pagination") == undefined) {
@@ -37,6 +45,7 @@ export default class Pagination {
     }
 
     static back() {
+
         const oldvalue = $.cookie("pagination")
         if ($("#pagination-component").length > 0) {
             if ($.cookie("pagination") == undefined) {
@@ -74,7 +83,10 @@ export default class Pagination {
             })
 
             $("#image-page").html(`<center>${htmlImage}</center>`)
-            
+        
+            ControlBoxToPhoto.execute()
+            PagePictures.execute()
+    
         }).catch(e => {
             if (e.status = 404) {
                 $.cookie(

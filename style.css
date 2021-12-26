@@ -227,9 +227,8 @@ Version:1.0.0
 .to-photo {
     margin-top:25px;
     padding: 5px;
+    width: 60%;
     background-color: #b4b3c3;
-    margin-left: 25px;
-    margin-right: 25px;
     border-radius: 25px;    
 }
 
@@ -318,4 +317,10 @@ Version:1.0.0
     padding: 3px;
     color:#637d97;
     cursor: pointer;
+}
+
+
+#image-page {
+    overflow: scroll;
+    max-height: 400px;
 }
